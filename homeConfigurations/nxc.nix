@@ -31,6 +31,11 @@ let
           ];
           enable = true;
         };
+        git = {
+          enable = true;
+          userEmail = "archcorsair@gmail.com";
+          userName = "Daniel Shneyder";
+        };
         jq = {
           enable = true;
         };
