@@ -283,6 +283,7 @@ let
             grep = "rg";
             ll = "eza";
             nix-shell = "nix-shell --run \$SHELL";
+            man = "batman";
           };
           syntaxHighlighting = {
             enable = true;
