@@ -37,6 +37,7 @@ let
           "boop"
           "daisydisk"
           "discord"
+          "font-fira-code-nerd-font"
           "gitkraken"
           "hoppscotch"
           "istat-menus"
@@ -63,6 +64,7 @@ let
         taps = [
           "eth-p/software"
           "homebrew/cask-versions"
+          "homebrew/cask-fonts"
         ];
       };
       programs = {
