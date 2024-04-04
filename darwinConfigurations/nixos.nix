@@ -17,6 +17,7 @@ let
         brews = [
           "bat"
           "bat-extras-batman"
+          "bun"
           "eza"
           "fd"
           "fnm"
@@ -65,6 +66,7 @@ let
           "eth-p/software"
           "homebrew/cask-versions"
           "homebrew/cask-fonts"
+          "oven-sh/bun"
         ];
       };
       programs = {
