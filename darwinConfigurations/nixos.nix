@@ -47,7 +47,6 @@ let
           "rectangle"
           "skitch"
           "spotify"
-          "teamviewer"
           "visual-studio-code-insiders"
           "warp"
         ];
