@@ -1,5 +1,5 @@
 {
-  description = "MacOS Personal Flake";
+  description = "MacOS Work Flake";
   inputs = {
     nixpkgs.url = "flake:nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "flake:nix-darwin";

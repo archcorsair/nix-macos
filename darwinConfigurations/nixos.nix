@@ -3,7 +3,7 @@ let
   darwinModule = { config, lib, pkgs, ... }: {
     imports = [
       inputs.home-manager.darwinModules.home-manager
-      inputs.self.homeConfigurations.nxc.nixosModule
+      inputs.self.homeConfigurations.vn56bq8.nixosModule
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
@@ -82,8 +82,8 @@ let
       };
       users = {
         users = {
-          nxc = {
-            home = /Users/nxc;
+          vn56bq8 = {
+            home = /Users/vn56bq8;
           };
         };
       };

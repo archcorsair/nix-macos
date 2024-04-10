@@ -33,8 +33,6 @@ let
         };
         git = {
           enable = true;
-          userEmail = "archcorsair@gmail.com";
-          userName = "Daniel Shneyder";
         };
         jq = {
           enable = true;
@@ -255,6 +253,9 @@ let
         zsh = {
           enable = true;
           initExtra = ''
+            # Sledge
+            export PATH=/Users/vn56bq8/.sledge/bin:''$PATH
+
             # Bun
             export BUN_INSTALL="''$HOME/.bun"
             export PATH="''$BUN_INSTALL/bin:''$PATH"
@@ -299,7 +300,7 @@ let
     };
   };
   nixosModule = { ... }: {
-    home-manager.users.nxc = homeModule;
+    home-manager.users.vn56bq8 = homeModule;
   };
 in
 (
