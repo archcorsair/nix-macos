@@ -30,12 +30,10 @@ let
           "rustup-init"
           "speedtest-cli"
           "starship"
-          "tailscale"
           "zoxide"
         ];
         casks = [
           "boop"
-          "daisydisk"
           "discord"
           "font-fira-code-nerd-font"
           "gitkraken"
