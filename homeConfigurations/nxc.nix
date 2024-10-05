@@ -317,6 +317,7 @@
           whatismyip = "curl -s 'https://api.ipify.org?format=json' | jq -r '.ip'";
           wimi = "whatismyip";
           vim = "nvim";
+          rust-env = "~/.config/nix/rust-env.sh"
         };
         syntaxHighlighting = {
           enable = true;
