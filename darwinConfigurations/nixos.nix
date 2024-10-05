@@ -1,100 +1,69 @@
 { inputs, ... }@flakeContext:
+
 let
   darwinModule = { config, lib, pkgs, ... }: {
-    imports = [
-      inputs.home-manager.darwinModules.home-manager
-      inputs.self.homeConfigurations.nxc.nixosModule
-      {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-      }
+    documentation.enable = false;
+
+    environment.systemPackages = [
+      pkgs.rustup
     ];
-    config = {
-      documentation = {
-        enable = false;
+
+    homebrew = {
+      enable = true;
+      casks = [
+        "boop"
+        "daisydisk"
+        "discord"
+        "font-fira-code-nerd-font"
+        "gitkraken"
+        "hoppscotch"
+        "istat-menus"
+        "iterm2"
+        "kap"
+        "keyboardcleantool"
+        "notion"
+        "numi"
+        "skitch"
+        "spotify"
+        "teamviewer"
+        "visual-studio-code-insiders"
+        "warp"
+      ];
+      masApps = {
+        "1Password for Safari" = 1569813296;
+        Amphetamine = 937984704;
+        ColorSlurp = 1287239339;
+        "HEIC Converter" = 1294126402;
+        TestFlight = 899247664;
       };
-      homebrew = {
-        brews = [
-          "bat"
-          "bat-extras-batman"
-          "bun"
-          "eza"
-          "fd"
-          "fnm"
-          "fzf"
-          "ghq"
-          "git"
-          "jq"
-          "mas"
-          "neofetch"
-          "ripgrep"
-          "rustup-init"
-          "speedtest-cli"
-          "starship"
-          "tailscale"
-          "zoxide"
-        ];
-        casks = [
-          "boop"
-          "daisydisk"
-          "discord"
-          "font-fira-code-nerd-font"
-          "gitkraken"
-          "hoppscotch"
-          "istat-menus"
-          "iterm2"
-          "kap"
-          "keyboardcleantool"
-          "notion"
-          "numi"
-          "rectangle"
-          "skitch"
-          "spotify"
-          "teamviewer"
-          "visual-studio-code-insiders"
-          "warp"
-        ];
-        enable = true;
-        masApps = {
-          "1Password for Safari" = 1569813296;
-          Amphetamine = 937984704;
-          ColorSlurp = 1287239339;
-          "HEIC Converter" = 1294126402;
-          TestFlight = 899247664;
-        };
-        taps = [
-          "eth-p/software"
-          "homebrew/cask-versions"
-          "homebrew/cask-fonts"
-          "oven-sh/bun"
-        ];
-      };
-      programs = {
-        vim = {
-          enable = true;
-        };
-        zsh = {
-          enable = true;
-        };
-      };
-      services = {
-        nix-daemon = {
-          enable = true;
-        };
-      };
-      users = {
-        users = {
-          nxc = {
-            home = /Users/nxc;
-          };
-        };
-      };
+      taps = [
+        "eth-p/software"
+        "homebrew/cask-versions"
+        "homebrew/cask-fonts"
+      ];
     };
+
+    programs.vim.enable = true;
+    programs.zsh.enable = true;
+
+    services.nix-daemon.enable = true;
+
+    users.users.nxc = {
+      home = /Users/nxc;
+    };
+
+    system.stateVersion = 4;
   };
 in
-inputs.nix-darwin.lib.darwinSystem {
-  modules = [
+{
+  imports = [
     darwinModule
+    inputs.home-manager.darwinModules.home-manager
   ];
-  system = "aarch64-darwin";
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.nxc = { pkgs, ... }: import ../homeConfigurations/nxc.nix { inherit inputs pkgs; };
+  };
 }

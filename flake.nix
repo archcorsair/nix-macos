@@ -1,24 +1,29 @@
 {
   description = "MacOS Personal Flake";
   inputs = {
-    nixpkgs.url = "flake:nixpkgs/nixpkgs-unstable";
-    nix-darwin.url = "flake:nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    home-manager.url = "flake:home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = inputs:
+  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager }:
     let
-      flakeContext = {
-        inherit inputs;
-      };
+      system = "aarch64-darwin";
     in
     {
       darwinConfigurations = {
-        nixos = import ./darwinConfigurations/nixos.nix flakeContext;
-      };
-      homeConfigurations = {
-        nxc = import ./homeConfigurations/nxc.nix flakeContext;
+        default = nix-darwin.lib.darwinSystem {
+          inherit system;
+          modules = [
+            ./darwinConfigurations/nixos.nix
+          ];
+          specialArgs = { inherit inputs; };
+        };
       };
     };
 }
