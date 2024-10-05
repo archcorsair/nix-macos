@@ -58,6 +58,7 @@
           options = {
             side-by-side = true;
             line-numbers = true;
+            dark = true;
           };
         };
       };
@@ -314,6 +315,7 @@
           man = "batman";
           cd = "z";
           whatismyip = "curl -s 'https://api.ipify.org?format=json' | jq -r '.ip'";
+          wimi = "whatismyip";
           vim = "nvim";
         };
         syntaxHighlighting = {

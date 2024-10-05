@@ -4,10 +4,6 @@ let
   darwinModule = { config, lib, pkgs, ... }: {
     documentation.enable = false;
 
-    environment.systemPackages = [
-      pkgs.rustup
-    ];
-
     homebrew = {
       enable = true;
       casks = [
