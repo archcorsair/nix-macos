@@ -83,7 +83,6 @@
               aliases = {
                 co = "checkout";
                 c = "commit";
-                p = "pull";
                 s = "status";
                 a = "add";
                 d = "diff";
