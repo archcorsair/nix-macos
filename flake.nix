@@ -3,13 +3,14 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    # Nix Darwin
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    # Homebrew
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # Home Manager
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
@@ -30,7 +31,6 @@
           jq
           mas
           neofetch
-          neovim
           nixfmt
           pnpm
           ripgrep
@@ -250,7 +250,7 @@
               '';
               shellAliases = {
                 update =
-                  "nix flake update && darwin-rebuild switch --flake .#mbp --show-trace";
+                  "nix flake update && darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace";
                 code = "code-insiders";
                 g = "git";
                 grep = "rg";
@@ -266,6 +266,11 @@
                 enable = true;
                 package = pkgs.zsh-syntax-highlighting;
               };
+            };
+
+            neovim = {
+              enable = true;
+              defaultEditor = true;
             };
 
             zoxide = {
