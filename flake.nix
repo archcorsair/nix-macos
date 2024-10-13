@@ -82,9 +82,11 @@
               userName = "Daniel Shneyder";
               aliases = {
                 co = "checkout";
+                c = "commit";
                 p = "pull";
                 s = "status";
                 a = "add";
+                d = "diff";
               };
               delta = { enable = true; };
               extraConfig = {
@@ -248,6 +250,8 @@
                 setopt clobber
               '';
               shellAliases = {
+                update =
+                  "nix flake update && darwin-rebuild switch --flake .#mbp --show-trace";
                 code = "code-insiders";
                 g = "git";
                 grep = "rg";
