@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   programs.git = {
     enable = true;
     userEmail = "archcorsair@gmail.com";

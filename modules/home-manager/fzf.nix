@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   programs.fzf = {
     enable = true;
     defaultCommand = "fd --type file --color=always";

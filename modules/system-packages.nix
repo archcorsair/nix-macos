@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -20,6 +15,7 @@
     mas
     neofetch
     neovim
+    nil
     nixfmt-rfc-style
     pnpm
     ripgrep

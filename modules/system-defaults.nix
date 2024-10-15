@@ -1,11 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-{
   system.defaults = {
     dock = {
       minimize-to-application = true;
