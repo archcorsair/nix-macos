@@ -1,0 +1,49 @@
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+
+{
+  system.defaults = {
+    dock = {
+      minimize-to-application = true;
+      # Hot Corners
+      wvous-bl-corner = 2; # Mission Control
+      wvous-br-corner = 11; # Launchpad
+      wvous-tl-corner = 3; # Application Windows
+      wvous-tr-corner = 4; # Desktop
+
+      persistent-apps = [
+        "/System/Applications/App Store.app"
+        "/Applications/Arc.app"
+        "/Applications/Google Chrome Dev.app"
+        "/System/Applications/Messages.app"
+        "/Applications/Discord.app"
+        "/Applications/Warp.app"
+        "/Applications/Visual Studio Code - Insiders.app"
+        "/Applications/Cursor.app"
+        "/Applications/Spotify.app"
+        "/System/Applications/Calendar.app"
+        "/System/Applications/System Settings.app"
+        "/System/Applications/iPhone Mirroring.app"
+      ];
+    };
+
+    finder = {
+      FXPreferredViewStyle = "clmv"; # Column View
+      FXDefaultSearchScope = "SCcf"; # Current Folder
+      ShowPathbar = true;
+    };
+
+    trackpad = {
+      Clicking = true; # Enables tap to click
+    };
+
+    NSGlobalDomain = {
+      AppleInterfaceStyle = "Dark";
+      "com.apple.swipescrolldirection" = false; # Disable natural scrolling
+    };
+  };
+}
