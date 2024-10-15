@@ -20,7 +20,7 @@
     mas
     neofetch
     neovim
-    nixfmt
+    nixfmt-rfc-style
     pnpm
     ripgrep
     speedtest-cli

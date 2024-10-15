@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   programs.eza = {
@@ -6,6 +11,9 @@
     icons = true;
     git = true;
     enableZshIntegration = true;
-    extraOptions = [ "-l" "-g" ];
+    extraOptions = [
+      "-l"
+      "-g"
+    ];
   };
 }
