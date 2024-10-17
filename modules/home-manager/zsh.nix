@@ -13,14 +13,15 @@
     '';
 
     shellAliases = {
-      update = "nix flake update && darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace";
+      cd = "z";
       code = "code-insiders";
       g = "git";
       grep = "rg";
       ll = "eza";
-      nix-shell = "nix-shell --run $SHELL";
       man = "batman";
-      cd = "z";
+      nix-shell = "nix-shell --run $SHELL";
+      tree = ''br -c :pt "$@"'';
+      update = "nix flake update && darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace";
       whatismyip = "curl -s 'https://api.ipify.org?format=json' | jq -r '.ip'";
       wimi = "whatismyip";
     };

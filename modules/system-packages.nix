@@ -8,6 +8,7 @@
     curlie
     delta
     doggo
+    fastfetch
     fd
     fnm
     fortune
@@ -16,7 +17,6 @@
     jq
     lolcat
     mas
-    neofetch
     neovim
     nil
     nixfmt-rfc-style

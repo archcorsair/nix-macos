@@ -35,6 +35,7 @@
             { pkgs, ... }:
             {
               imports = [
+                ./modules/home-manager/broot.nix
                 ./modules/home-manager/bat.nix
                 ./modules/home-manager/btop.nix
                 ./modules/home-manager/eza.nix
