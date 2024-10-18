@@ -13,6 +13,7 @@
     fnm
     fortune
     ghq
+    gopls
     httpie
     jq
     lolcat
