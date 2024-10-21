@@ -7,6 +7,7 @@
     cowsay
     curlie
     delta
+    deno
     doggo
     fastfetch
     fd
