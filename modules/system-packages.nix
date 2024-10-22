@@ -8,6 +8,7 @@
     curlie
     delta
     deno
+    devenv
     doggo
     fastfetch
     fd
