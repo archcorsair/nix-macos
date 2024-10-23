@@ -10,6 +10,9 @@
 
       # options
       setopt clobber
+
+      # Manually add Ghostty to PATH
+      export PATH=$PATH:$GHOSTTY_BIN_DIR
     '';
 
     shellAliases = {
