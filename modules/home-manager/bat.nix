@@ -1,9 +1,13 @@
+{ pkgs, ... }:
+
 {
   programs.bat = {
     enable = true;
     config = {
       style = "header,header-filesize";
-      theme = "base16";
+      theme = "ansi";
     };
+
+    extraPackages = with pkgs.bat-extras; [ batman ];
   };
 }
