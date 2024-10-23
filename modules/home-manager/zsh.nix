@@ -34,9 +34,8 @@
       package = pkgs.zsh-syntax-highlighting;
     };
 
-    autosuggestions = {
+    autosuggestion = {
       enable = true;
-      package = pkgs.zsh-autosuggestions;
     };
   };
 }
