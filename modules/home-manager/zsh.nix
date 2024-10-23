@@ -33,5 +33,10 @@
       enable = true;
       package = pkgs.zsh-syntax-highlighting;
     };
+
+    autosuggestions = {
+      enable = true;
+      package = pkgs.zsh-autosuggestions;
+    };
   };
 }
