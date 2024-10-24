@@ -5,14 +5,17 @@
     enable = true;
 
     initExtra = ''
+      # Ghostty Setup
+      export PATH=$PATH:$GHOSTTY_BIN_DIR
+
+      # fzf-tab
+      source $HOME/ghq/github.com/Aloxaf/fzf-tab/fzf-tab.plugin.zsh
+
       # fnm
       eval "$(fnm env --use-on-cd)"
 
       # options
       setopt clobber
-
-      # Manually add Ghostty to PATH
-      export PATH=$PATH:$GHOSTTY_BIN_DIR
     '';
 
     shellAliases = {
@@ -34,8 +37,6 @@
       package = pkgs.zsh-syntax-highlighting;
     };
 
-    autosuggestion = {
-      enable = true;
-    };
+    autosuggestion.enable = true;
   };
 }

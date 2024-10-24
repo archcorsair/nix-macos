@@ -31,7 +31,6 @@
     ];
 
     taps = [
-      "eth-p/software"
       "homebrew/cask-versions"
     ];
 
