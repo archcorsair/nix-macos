@@ -27,7 +27,7 @@
       man = "batman";
       nix-shell = "nix-shell --run $SHELL";
       tree = ''br -c :pt "$@"'';
-      update = "nix flake update && darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace";
+      update = "cd nix-macos && nix flake update && darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace";
       whatismyip = "curl -s 'https://api.ipify.org?format=json' | jq -r '.ip'";
       wimi = "whatismyip";
     };
