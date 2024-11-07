@@ -9,13 +9,18 @@
       export PATH=$PATH:$GHOSTTY_BIN_DIR
 
       # fzf-tab
-      source $HOME/ghq/github.com/Aloxaf/fzf-tab/fzf-tab.plugin.zsh
+      # source $HOME/ghq/github.com/Aloxaf/fzf-tab/fzf-tab.plugin.zsh
 
       # fnm
       eval "$(fnm env --use-on-cd)"
 
       # options
       setopt clobber
+
+      # carapace
+      export CARAPACE_BRIDGES='zsh,bash,inshellisense' # optional
+      zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+      source <(carapace _carapace)
     '';
 
     shellAliases = {
