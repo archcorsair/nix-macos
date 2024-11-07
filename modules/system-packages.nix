@@ -28,7 +28,7 @@
     sl
     speedtest-cli
     termshark
-    zig
+    # zig
   ];
 
   fonts.packages = with pkgs; [ fira-code-nerdfont ];
