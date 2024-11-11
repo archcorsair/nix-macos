@@ -43,6 +43,7 @@
                 ./modules/home-manager/fzf.nix
                 ./modules/home-manager/git.nix
                 ./modules/home-manager/neovim.nix
+                ./modules/home-manager/nushell.nix
                 ./modules/home-manager/ssh.nix
                 ./modules/home-manager/starship.nix
                 ./modules/home-manager/zoxide.nix
