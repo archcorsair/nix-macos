@@ -10,7 +10,6 @@
       grep = "rg";
       man = "batman";
       nix-shell = "nix-shell --run $env.SHELL";
-      update = "cd ~/ghq/github.com/archcorsair/nix-macos and nix flake update and darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace";
       wimi = "whatismyip";
     };
 
@@ -37,6 +36,13 @@
       # whatismyip
       def whatismyip [] {
         http get https://api.ipify.org?format=json | get ip
+      }
+
+      # update
+      def _update [] {
+        cd ~/ghq/github.com/archcorsair/nix-macos
+        nix flake update
+        darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace
       }
     '';
   };
