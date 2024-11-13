@@ -8,6 +8,7 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    zig-overlay.url = "github:mitchellh/zig-overlay";
   };
 
   outputs =
@@ -17,6 +18,7 @@
       nixpkgs,
       nix-homebrew,
       home-manager,
+      zig-overlay,
     }:
     let
       configuration =
@@ -75,6 +77,14 @@
     {
       darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
         modules = [
+          (
+            { pkgs, ... }:
+            {
+              nixpkgs.overlays = [
+                zig-overlay.overlays.default
+              ];
+            }
+          )
           configuration
           nix-homebrew.darwinModules.nix-homebrew
           {
