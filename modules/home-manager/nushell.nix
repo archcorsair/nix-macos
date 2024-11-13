@@ -14,6 +14,9 @@
     };
 
     envFile.text = ''
+      # Environment Variables
+      $env.XDG_CONFIG_HOME = ($env.HOME | path join ".config")
+
       # Starship Prompt
       mkdir ~/.cache/starship
       starship init nu | save -f ~/.cache/starship/init.nu
