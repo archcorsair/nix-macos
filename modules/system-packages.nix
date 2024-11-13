@@ -15,6 +15,7 @@
     fnm
     fortune
     ghq
+    glow
     gopls
     httpie
     jq
