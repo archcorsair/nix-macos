@@ -20,7 +20,6 @@
     jq
     lolcat
     mas
-    ncdu
     neovim
     nil
     nixfmt-rfc-style

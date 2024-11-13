@@ -30,6 +30,10 @@
       "wezterm"
     ];
 
+    brews = [
+      "ncdu"
+    ];
+
     taps = [
       "homebrew/cask-versions"
     ];
