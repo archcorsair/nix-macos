@@ -20,6 +20,7 @@
     jq
     lolcat
     mas
+    ncdu
     neovim
     nil
     nixfmt-rfc-style
@@ -28,7 +29,6 @@
     sl
     speedtest-cli
     termshark
-    # zig
   ];
 
   fonts.packages = with pkgs; [ fira-code-nerdfont ];
