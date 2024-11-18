@@ -26,6 +26,17 @@
     nixfmt-rfc-style
     pnpm
     ripgrep
+    (rust-bin.stable.latest.default.override {
+      extensions = [
+        "clippy"
+        "rust-src"
+        "rust-std"
+      ];
+      targets = [
+        "aarch64-apple-darwin"
+        "x86_64-apple-darwin"
+      ];
+    })
     sl
     speedtest-cli
     termshark

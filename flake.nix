@@ -9,6 +9,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     zig-overlay.url = "github:mitchellh/zig-overlay";
+    rust-overlay.url = "github:oxalica/rust-overlay";
+    rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -19,6 +21,7 @@
       nix-homebrew,
       home-manager,
       zig-overlay,
+      rust-overlay,
     }:
     let
       configuration =
@@ -82,6 +85,7 @@
             {
               nixpkgs.overlays = [
                 zig-overlay.overlays.default
+                rust-overlay.overlays.default
               ];
             }
           )
