@@ -20,6 +20,7 @@
         "/Applications/Cursor.app"
         "/Applications/Spotify.app"
         "/System/Applications/Calendar.app"
+        "/Applications/Pixelmator Pro.app"
         "/System/Applications/System Settings.app"
         "/System/Applications/iPhone Mirroring.app"
       ];
