@@ -9,20 +9,13 @@
       g = "git";
       grep = "rg";
       man = "batman";
-      nix-shell = "nix-shell --run $env.SHELL";
       wimi = "whatismyip";
+      # nix-shell = "nix-shell --run $env.SHELL";
     };
 
     envFile.text = ''
       # Environment Variables
       $env.XDG_CONFIG_HOME = ($env.HOME | path join ".config")
-
-      # Starship Prompt
-      mkdir ~/.cache/starship
-      starship init nu | save -f ~/.cache/starship/init.nu
-
-      # Zoxide
-      zoxide init nushell | save -f ~/.zoxide.nu
     '';
 
     configFile.text = ''
@@ -30,18 +23,17 @@
           show_banner: false
         }
 
-        # Starhip Prompt
-        use ~/.cache/starship/init.nu
-
-        # Zoxide
-        source ~/.zoxide.nu
-
         # update
         def rebuild [] {
           cd ~/ghq/github.com/archcorsair/nix-macos
           nix flake update
           darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace
         }
+
+        # nix shell
+        # def nix-shell [] {
+        #   ^nix-shell --run $env.SHELL
+        # }
 
         def "version-completions" [] {
         [
