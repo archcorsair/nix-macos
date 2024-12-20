@@ -34,6 +34,7 @@
       $env.PATH = (
          $env.PATH
          | split row (char esep)
+         | prepend '/usr/local/bin'
          | prepend '/opt/homebrew/bin'
          | prepend '/opt/homebrew/sbin'
          | prepend '/nix/var/nix/profiles/default/bin'
