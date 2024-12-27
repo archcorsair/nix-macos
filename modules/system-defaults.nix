@@ -22,6 +22,7 @@
         "/System/Applications/Calendar.app"
         "/Applications/Affinity Photo 2.app"
         "/Applications/Pixelmator Pro.app"
+        "/Applications/Eagle.app"
         "/System/Applications/System Settings.app"
         "/System/Applications/iPhone Mirroring.app"
       ];
