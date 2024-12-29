@@ -1,6 +1,12 @@
+{ pkgs, ... }:
+
 {
   programs.nushell = {
     enable = true;
+    plugins = [
+      pkgs.nushellPlugins.formats
+      pkgs.nushellPlugins.highlight
+    ];
 
     shellAliases = {
       ll = "eza";
