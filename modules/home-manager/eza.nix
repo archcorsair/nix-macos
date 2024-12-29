@@ -7,6 +7,11 @@
     extraOptions = [
       "-l"
       "-g"
+      "--git-repos"
+      "--group-directories-first"
+      "--hyperlink"
+      "--smart-group"
+      "--no-quotes"
     ];
   };
 }
