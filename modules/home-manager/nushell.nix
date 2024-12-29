@@ -3,9 +3,11 @@
 {
   programs.nushell = {
     enable = true;
+
     plugins = [
       pkgs.nushellPlugins.formats
       pkgs.nushellPlugins.highlight
+      pkgs.nushellPlugins.gstat
     ];
 
     shellAliases = {
