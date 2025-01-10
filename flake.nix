@@ -47,6 +47,7 @@
                 ./modules/home-manager/eza.nix
                 ./modules/home-manager/fzf.nix
                 ./modules/home-manager/git.nix
+                ./modules/home-manager/helix.nix
                 ./modules/home-manager/neovim.nix
                 ./modules/home-manager/nushell.nix
                 ./modules/home-manager/ssh.nix
