@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-24.11";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
@@ -18,12 +19,19 @@
       self,
       nix-darwin,
       nixpkgs,
+      nixpkgs-stable,
       nix-homebrew,
       home-manager,
       zig-overlay,
       rust-overlay,
     }:
     let
+      # Prepare stable packages
+      stablePkgs = import nixpkgs-stable {
+        system = "aarch64-darwin";
+        config = {allowUnfree = true;};
+      };
+
       configuration =
         { pkgs, ... }:
         {
@@ -80,6 +88,7 @@
     in
     {
       darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
+        specialArgs = { inherit stablePkgs; }; # this will make the new pkgs available to everything in the config
         modules = [
           (
             { pkgs, ... }:
