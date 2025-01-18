@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ stablePkgs, ... }:
 
 {
   programs.bat = {
@@ -8,6 +8,6 @@
       theme = "ansi";
     };
 
-    extraPackages = with pkgs.bat-extras; [ batman ];
+    extraPackages = with stablePkgs.bat-extras; [ batman ];
   };
 }
