@@ -12,6 +12,7 @@
     zig-overlay.url = "github:mitchellh/zig-overlay";
     rust-overlay.url = "github:oxalica/rust-overlay";
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
+    tokyonight-overlay.url = "github:mrjones2014/tokyonight.nix";
   };
 
   outputs =
@@ -24,6 +25,7 @@
       home-manager,
       zig-overlay,
       rust-overlay,
+      tokyonight-overlay,
     }:
     let
       stablePkgs = import nixpkgs-stable {
@@ -47,6 +49,7 @@
             { pkgs, ... }:
             {
               imports = [
+                tokyonight-overlay.homeManagerModules.default
                 ./modules/home-manager/broot.nix
                 ./modules/home-manager/bat.nix
                 ./modules/home-manager/btop.nix
@@ -62,6 +65,11 @@
                 ./modules/home-manager/zoxide.nix
                 ./modules/home-manager/zsh.nix
               ];
+
+              tokyonight = {
+                enable = true;
+                style = "night";
+              };
 
               home.stateVersion = "24.05";
             };
