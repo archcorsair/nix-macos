@@ -31,6 +31,7 @@
     ];
 
     brews = [
+      "biome"
       "ncdu"
     ];
 
