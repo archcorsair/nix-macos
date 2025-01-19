@@ -33,6 +33,7 @@
     brews = [
       "biome"
       "ncdu"
+      "taplo"
     ];
 
     taps = [
