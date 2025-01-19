@@ -26,6 +26,7 @@
     nixfmt-rfc-style
     pnpm
     ripgrep
+    vscode-langservers-extracted
     (rust-bin.stable.latest.default.override {
       extensions = [
         "clippy"
