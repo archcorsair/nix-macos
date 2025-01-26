@@ -33,6 +33,9 @@
     brews = [
       "biome"
       "ncdu"
+      "podman"
+      "podman-compose"
+      "podman-tui"
       "taplo"
     ];
 
