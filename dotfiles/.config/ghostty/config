@@ -1,0 +1,28 @@
+# Font Configuration
+font-family = "MonaspiceNe Nerd Font"
+window-title-font-family = "MonaspiceNe Nerd Font Mono"
+
+# Theme Config
+# folke themes: tokyonight_moon, tokyonight_night, tokyonight_day, tokyonight_storm
+theme = /Users/nxc/ghq/github.com/folke/tokyonight.nvim/extras/ghostty/tokyonight_storm
+
+# Config
+cursor-click-to-move = true
+background-opacity = 0.8
+background-blur-radius = 20
+
+# Titlebar Config
+title = 👻
+macos-titlebar-proxy-icon = hidden
+# macos-titlebar-style = hidden
+
+# Disable Auto Updates
+auto-update = check
+auto-update-channel = tip
+
+# Keybinds
+keybind = super+right=adjust_selection:end
+keybind = global:super+shift+/=toggle_quick_terminal
+
+# Shell Override
+command = /etc/profiles/per-user/nxc/bin/nu

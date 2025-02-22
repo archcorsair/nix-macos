@@ -2,7 +2,7 @@
 
 {
   programs.nushell = {
-    enable = true;
+    enable = false;
 
     plugins = [
       pkgs.nushellPlugins.formats

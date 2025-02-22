@@ -23,7 +23,7 @@
       code = "code-insiders";
       g = "git";
       grep = "rg";
-      ll = "eza";
+      ll = "eza -lah";
       man = "batman";
       nix-shell = "nix-shell --run $SHELL";
       tree = ''br -c :pt "$@"'';
