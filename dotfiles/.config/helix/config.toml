@@ -1,0 +1,65 @@
+theme = "tokyonight_moon"
+
+[editor]
+mouse = true
+line-number = "relative"
+end-of-line-diagnostics = "hint"
+scroll-lines = 2
+cursorline = true
+cursorcolumn = true
+bufferline = "always"
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = "↩ "
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = " "
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[editor.statusline]
+left = ["mode", "spinner", "diagnostics"]
+center = ["file-name", "separator", "version-control", "separator"]
+right = ["position", "position-percentage", "total-line-numbers"]
+separator = "│"
+mode.normal = "normal"
+mode.insert = "insert"
+mode.select = "select"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+character = "╎" # Alternative characters options: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+# Use system clipboard
+p = "paste_clipboard_before"
+y = "yank_main_selection_to_clipboard"
+
+
+# Mark line and move with them up/down
+# https://github.com/helix-editor/helix/discussions/5764#discussioncomment-4840408
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = [
+    "extend_to_line_bounds",
+    "delete_selection",
+    "move_line_up",
+    "paste_before",
+]

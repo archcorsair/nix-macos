@@ -1,0 +1,39 @@
+[alias]
+	a = "add"
+	c = "commit"
+	co = "checkout"
+	d = "diff"
+	s = "status"
+
+[core]
+	pager = "/opt/homebrew/bin/delta"
+
+[delta]
+	features = "tokyonight_night"
+	line-numbers-minus-style = "syntax #914c54"
+	line-numbers-plus-style = "syntax #449dab"
+	line-numbers-zero-style = "syntax #3b4261"
+	minus-emph-style = "syntax #713137"
+	minus-empty-line-marker-style = "syntax #37222c"
+	minus-non-emph-style = "syntax #37222c"
+	minus-style = "syntax #37222c"
+	plus-emph-style = "syntax #2c5a66"
+	plus-empty-line-marker-style = "syntax #20303b"
+	plus-non-emph-style = "syntax #20303b"
+	plus-style = "syntax #20303b"
+
+[gpg]
+	format = "openpgp"
+
+[gpg "openpgp"]
+	program = "/opt/homebrew/bin/gpg"
+
+[interactive]
+	diffFilter = "/opt/homebrew/bin/delta --color-only"
+
+[user]
+	email = "archcorsair@gmail.com"
+	name = "Daniel Shneyder"
+
+[include]
+	path = "/Users/nxc/ghq/github.com/folke/tokyonight.nvim/extras/delta/tokyonight_night.gitconfig"

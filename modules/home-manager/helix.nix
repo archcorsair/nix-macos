@@ -2,7 +2,7 @@
 
 {
   programs.helix = {
-    enable = true;
+    enable = false;
     extraPackages = with pkgs; [ typescript-language-server ];
   };
 }

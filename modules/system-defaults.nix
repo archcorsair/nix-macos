@@ -25,6 +25,7 @@
         "/Applications/Eagle.app"
         "/System/Applications/System Settings.app"
         "/System/Applications/iPhone Mirroring.app"
+        "/System/Applications/Weather.app"
       ];
     };
 

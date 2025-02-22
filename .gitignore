@@ -2,3 +2,8 @@ result
 result-*
 .DS_Store
 settings.json
+raycast
+history.txt
+fzf
+darktable/
+op/
