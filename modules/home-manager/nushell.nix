@@ -49,6 +49,7 @@
          | prepend '/run/current-system/sw/bin/'
          | prepend ('/etc/profiles/per-user' | path join $env.USER bin)
          | prepend ($env.HOME | path join '.nix-profile/bin')
+         | prepend ($env.HOME | path join '.cargo/bin')
          | uniq # filter so the paths are unique
       )
     '';

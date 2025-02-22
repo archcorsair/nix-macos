@@ -10,8 +10,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     zig-overlay.url = "github:mitchellh/zig-overlay";
-    rust-overlay.url = "github:oxalica/rust-overlay";
-    rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
+    # rust-overlay.url = "github:oxalica/rust-overlay";
+    # rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
     tokyonight-overlay.url = "github:mrjones2014/tokyonight.nix";
   };
 
@@ -24,7 +24,7 @@
       nix-homebrew,
       home-manager,
       zig-overlay,
-      rust-overlay,
+      # rust-overlay,
       tokyonight-overlay,
     }:
     let
@@ -100,7 +100,7 @@
             {
               nixpkgs.overlays = [
                 zig-overlay.overlays.default
-                rust-overlay.overlays.default
+                # rust-overlay.overlays.default
               ];
             }
           )
