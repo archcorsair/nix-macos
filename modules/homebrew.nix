@@ -1,6 +1,6 @@
 {
   homebrew = {
-    enable = true;
+    enable = false;
 
     # Config
     onActivation.autoUpdate = true;
@@ -31,12 +31,12 @@
     ];
 
     brews = [
-      "biome"
-      "ncdu"
-      "podman"
-      "podman-compose"
-      "podman-tui"
-      "taplo"
+      # "biome"
+      # "ncdu"
+      # "podman"
+      # "podman-compose"
+      # "podman-tui"
+      # "taplo"
     ];
 
     taps = [

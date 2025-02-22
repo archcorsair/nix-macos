@@ -1,6 +1,6 @@
 {
   programs.git = {
-    enable = true;
+    enable = false;
     userEmail = "archcorsair@gmail.com";
     userName = "Daniel Shneyder";
     aliases = {

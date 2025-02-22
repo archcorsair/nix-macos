@@ -42,9 +42,15 @@
   } | table
 }
 
-source /Users/nxc/.cache/zoxide/init.nu
+# Zoxide
+source ~/.zoxide.nu
 
-use /Users/nxc/.cache/starship/init.nu
+# Starship
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+# Caparace
+source ~/.cache/carapace/init.nu
 
 alias "cd" = z
 alias "code" = code-insiders
@@ -52,8 +58,10 @@ alias "eza" = eza --icons auto --git -l -g --git-repos --group-directories-first
 alias "g" = git
 alias "grep" = rg
 alias "la" = eza -a
-alias "ll" = eza --icons auto --git -l -g --git-repos --group-directories-first --hyperlink --smart-group --no-quotesalias "ls" = eza --icons auto
+alias "ll" = eza --icons auto --git -lah -g --git-repos --group-directories-first --hyperlink --smart-group --no-quotes
+alias "ls" = eza --icons auto
 alias "lt" = eza --icons auto --tree --level=2 --no-quotes
 alias "man" = batman
 alias "wimi" = whatismyip
 
+# use ./fnm.nu # Disabled until I can find a proper workaround in fnm.nu

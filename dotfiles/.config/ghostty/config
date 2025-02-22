@@ -25,4 +25,4 @@ keybind = super+right=adjust_selection:end
 keybind = global:super+shift+/=toggle_quick_terminal
 
 # Shell Override
-command = /etc/profiles/per-user/nxc/bin/nu
+command = /opt/homebrew/bin/nu
