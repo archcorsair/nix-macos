@@ -52,6 +52,9 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 # Caparace
 source ~/.cache/carapace/init.nu
 
+# Atuin
+source ~/.local/share/atuin/init.nu
+
 alias "cd" = z
 alias "code" = code-insiders
 alias "eza" = eza --icons auto --git -l -g --git-repos --group-directories-first --hyperlink --smart-group --no-quotes

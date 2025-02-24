@@ -1,5 +1,3 @@
-
-
 typeset -U path cdpath fpath manpath
 
 # Oh-My-Zsh/Prezto calls compinit during initialization,
@@ -83,3 +81,6 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# Atuin
+eval "$(atuin init zsh)"
