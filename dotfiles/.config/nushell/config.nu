@@ -2,7 +2,13 @@
     show_banner: false
   }
 
-  # update
+  # update homebrew
+  def brewup [] {
+    brew update
+    brew upgrade
+  }
+
+  # update nix
   def rebuild [] {
     cd ~/ghq/github.com/archcorsair/nix-macos
     nix flake update
@@ -66,5 +72,8 @@ alias "ls" = eza --icons auto
 alias "lt" = eza --icons auto --tree --level=2 --no-quotes
 alias "man" = batman
 alias "wimi" = whatismyip
+alias "rm" = rm -vi
+alias "mv" = mv -vi
+alias "cp" = cp -vi
 
 # use ./fnm.nu # Disabled until I can find a proper workaround in fnm.nu
