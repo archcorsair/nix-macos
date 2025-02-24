@@ -15,37 +15,43 @@
     darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace
   }
 
-  # nix shell
-  # def nix-shell [] {
-  #   ^nix-shell --run $env.SHELL
-  # }
-
   def "version-completions" [] {
   [
     {value: "4", description: "IPv4 address (default)"},
     {value: "6", description: "IPv6 address"}
   ]}
 
-  # Define the function with completion annotation
-  def "whatismyip" [
+def "whatismyip" [
     version?: int@version-completions # Parameter with custom completion
-  ] {
-    # Validate and set default version
-    let version = if ($version == null) {
-      4
-    } else if ($version in [4 6]) {
-      $version
-    } else {
-      error make {
-      msg: "Invalid IP version. Must be either 4 or 6."
+] {
+    try {
+        # Validate and set default version
+        let version = if ($version == null) {
+            4
+        } else if ($version in [4 6]) {
+            $version
+        } else {
+            error make {
+                msg: "Invalid IP version. Must be either 4 or 6."
+            }
+        }
+
+        # Try to fetch IP address
+        try {
+            let ip = (http get $"https://api($version).ipify.org")
+            return {
+                $"ip($version)": $ip
+            } | table
+        } catch {
+            error make {
+                msg: "Failed to connect to ipify.org. Please check your internet connection."
+            }
+        }
+    } catch {|err|
+        # Display user-friendly error message without stack trace
+        print $"Error: ($err.msg)"
+        return
     }
-  }
-  # Get IP address
-  let ip = (http get $"https://api($version).ipify.org")
-  # Create record and display as table
-  {
-    $"ip($version)": $ip
-  } | table
 }
 
 # Zoxide
