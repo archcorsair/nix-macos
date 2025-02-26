@@ -2,6 +2,8 @@
     show_banner: false
   }
 
+  $env.EDITOR = "hx"
+
   # update homebrew
   def brewup [] {
     brew update
