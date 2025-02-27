@@ -84,4 +84,8 @@ alias "rm" = rm -vi
 alias "mv" = mv -vi
 alias "cp" = cp -vi
 
+# Zellij
+use ./zellij.nu
+
+# fnm
 # use ./fnm.nu # Disabled until I can find a proper workaround in fnm.nu
