@@ -8,6 +8,12 @@ scroll-lines = 2
 cursorline = true
 cursorcolumn = true
 bufferline = "always"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.soft-wrap]
 enable = true
