@@ -125,6 +125,8 @@ let external_completer = {|spans|
     }
 
     match $spans.0 {
+        # default nushell behavior for cd
+        cd => null
         # carapace completions are incorrect for nu
         nu => $fish_completer
         # fish completes commits and branch names in a nicer way
