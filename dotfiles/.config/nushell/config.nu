@@ -56,6 +56,10 @@ def "whatismyip" [
     }
 }
 
+# fzf
+$env.FZF_DEFAULT_COMMAND = "/opt/homebrew/bin/fd --type file --color=always -H --no-require-git"
+$env.FZF_DEFAULT_OPTS = "--ansi --preview '/opt/homebrew/bin/eza --tree --icons --git --level=1 --no-quotes --color=always --color-scale-mode=fixed --group-directories-first'"
+
 # Zoxide
 source ~/.zoxide.nu
 
@@ -71,7 +75,6 @@ source ~/.local/share/atuin/init.nu
 
 alias "cd" = z
 alias "code" = code-insiders
-alias "eza" = eza --icons auto --git -l -g --git-repos --group-directories-first --hyperlink --smart-group --no-quotes
 alias "g" = git
 alias "grep" = rg
 alias "la" = eza -a
