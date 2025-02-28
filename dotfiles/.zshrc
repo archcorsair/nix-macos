@@ -56,7 +56,6 @@ source <(carapace _carapace)
 # Aliases
 alias -- cd=z
 alias -- code=code-insiders
-alias -- eza='eza --icons auto --git -l -g --git-repos --group-directories-first --hyperlink --smart-group --no-quotes'
 alias -- g=git
 alias -- grep=rg
 alias -- la='eza -a'
