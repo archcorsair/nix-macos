@@ -3,7 +3,7 @@ typeset -U path cdpath fpath manpath
 # Oh-My-Zsh/Prezto calls compinit during initialization,
 # calling it twice causes slight start up slowdown
 # as all $fpath entries will be traversed again.
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
 
 
 HISTSIZE="10000"
