@@ -23,6 +23,10 @@
     {value: "6", description: "IPv6 address"}
   ]}
 
+def "summarize" [url: string] {
+    crwl $url -q "From the crawled content, extract the following details: 1. Title of the page 2. Summary of the page, which is a detailed summary 3. If there are multiple articles, just focus on the first one from the top and ignore the rest"
+}
+
 def "whatismyip" [
     version?: int@version-completions # Parameter with custom completion
 ] {
@@ -87,8 +91,8 @@ alias "rm" = rm -vi
 alias "mv" = mv -vi
 alias "cp" = cp -vi
 
-# Zellij
-use ./zellij.nu
+# Zellij - Temporarily Disabled
+# use ./zellij.nu
 
 # fnm
 # use ./fnm.nu # Disabled until I can find a proper workaround in fnm.nu
