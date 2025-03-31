@@ -1,4 +1,7 @@
-theme = "tokyonight_moon"
+# theme = "tokyonight_storm"
+theme = "tokyonight_night"
+# theme = "tokyonight_day"
+# theme = "tokyonight_moon"
 
 [editor]
 line-number = "relative"
@@ -104,3 +107,6 @@ C-k = [
 
 [keys.insert]
 "C-space" = "completion"
+
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
