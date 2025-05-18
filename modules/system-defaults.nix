@@ -1,4 +1,5 @@
 {
+  system.primaryUser = "nxc";
   system.defaults = {
     dock = {
       minimize-to-application = true;
