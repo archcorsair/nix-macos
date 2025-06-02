@@ -14,7 +14,7 @@
   def rebuild [] {
     cd ~/ghq/github.com/archcorsair/nix-macos
     nix flake update
-    darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace
+    sudo darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace
   }
 
   def "version-completions" [] {
