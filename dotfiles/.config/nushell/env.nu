@@ -12,6 +12,8 @@ $env.PATH = (
    | prepend '/usr/local/bin'
    | prepend '/opt/homebrew/bin'
    | prepend '/opt/homebrew/sbin'
+   | prepend '/opt/homebrew/opt'
+   | prepend '/opt/homebrew/opt/ruby/bin'
    | prepend '/nix/var/nix/profiles/default/bin'
    | prepend '/run/current-system/sw/bin/'
    | prepend ('/etc/profiles/per-user' | path join $env.USER bin)
