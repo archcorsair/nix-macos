@@ -11,6 +11,7 @@
 
       persistent-apps = [
         "/System/Applications/App Store.app"
+        "/Applications/Dia.app"
         "/Applications/Arc.app"
         "/Applications/Google Chrome Dev.app"
         "/System/Applications/Messages.app"
@@ -19,6 +20,7 @@
         "/Applications/Warp.app"
         "/Applications/Visual Studio Code - Insiders.app"
         "/Applications/Cursor.app"
+        "/Applications/Windsurf.app"
         "/Applications/Spotify.app"
         "/System/Applications/Calendar.app"
         "/Applications/Affinity Photo 2.app"
