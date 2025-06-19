@@ -6,12 +6,9 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-24.11";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     zig-overlay.url = "github:mitchellh/zig-overlay";
-    # rust-overlay.url = "github:oxalica/rust-overlay";
-    # rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
     tokyonight-overlay.url = "github:mrjones2014/tokyonight.nix";
   };
 
@@ -21,10 +18,8 @@
       nix-darwin,
       nixpkgs,
       nixpkgs-stable,
-      nix-homebrew,
       home-manager,
       zig-overlay,
-      # rust-overlay,
       tokyonight-overlay,
     }:
     let
@@ -36,7 +31,6 @@
         { pkgs, ... }:
         {
           imports = [
-            ./modules/homebrew.nix
             ./modules/system-packages.nix
             ./modules/system-defaults.nix
           ];
@@ -100,20 +94,10 @@
             {
               nixpkgs.overlays = [
                 zig-overlay.overlays.default
-                # rust-overlay.overlays.default
               ];
             }
           )
           configuration
-          nix-homebrew.darwinModules.nix-homebrew
-          {
-            nix-homebrew = {
-              enable = true;
-              enableRosetta = true;
-              user = "nxc";
-              autoMigrate = true;
-            };
-          }
           home-manager.darwinModules.home-manager
         ];
       };
