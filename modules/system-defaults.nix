@@ -21,6 +21,7 @@
         "/Applications/Visual Studio Code - Insiders.app"
         "/Applications/Cursor.app"
         "/Applications/Windsurf.app"
+        "/System/Applications/Music.app"
         "/Applications/Spotify.app"
         "/System/Applications/Calendar.app"
         "/Applications/Affinity Photo 2.app"
