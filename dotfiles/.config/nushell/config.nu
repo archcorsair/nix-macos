@@ -95,7 +95,17 @@ alias "cp" = cp -vi
 # use ./zellij.nu
 
 # fnm
-# use ./fnm.nu # Disabled until I can find a proper workaround in fnm.nu
+if not (which fnm | is-empty) {
+    ^fnm env --json | from json | load-env
+
+    $env.PATH = $env.PATH | prepend ($env.FNM_MULTISHELL_PATH | path join (if $nu.os-info.name == 'windows' {''} else {'bin'}))
+    $env.config.hooks.env_change.PWD = (
+        $env.config.hooks.env_change.PWD? | append {
+            condition: {|| ['.nvmrc' '.node-version', 'package.json'] | any {|el| $el | path exists}}
+            code: {|| ^fnm use}
+        }
+    )
+}
 
 # External Completers
 let fish_completer = {|spans|

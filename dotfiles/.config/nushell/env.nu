@@ -20,7 +20,6 @@ $env.PATH = (
    | prepend ($env.HOME | path join '.lmstudio/bin/')
    | prepend ($env.HOME | path join '.nix-profile/bin')
    | prepend ($env.HOME | path join '.local/bin')
-   | prepend ($env.HOME | path join 'Library/Application Support/fnm/aliases/default/bin')
    | uniq # filter so the paths are unique
 )
 
