@@ -18,7 +18,6 @@ $env.PATH = (
    | prepend '/run/current-system/sw/bin/'
    | prepend ('/etc/profiles/per-user' | path join $env.USER bin)
    | prepend ($env.HOME | path join '.lmstudio/bin/')
-   | prepend ($env.HOME | path join '.cargo/bin')
    | prepend ($env.HOME | path join '.nix-profile/bin')
    | prepend ($env.HOME | path join '.local/bin')
    | prepend ($env.HOME | path join 'Library/Application Support/fnm/aliases/default/bin')
@@ -35,3 +34,6 @@ carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
 
 # dotfiles path
 $env.DOTPATH = '~/ghq/github.com/archcorsair/nix-macos/dotfiles'
+
+# Rust toolchain
+source $"($nu.home-path)/.cargo/env.nu"
