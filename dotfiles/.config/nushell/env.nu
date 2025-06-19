@@ -17,6 +17,7 @@ $env.PATH = (
    | prepend '/nix/var/nix/profiles/default/bin'
    | prepend '/run/current-system/sw/bin/'
    | prepend ('/etc/profiles/per-user' | path join $env.USER bin)
+   | prepend ($env.HOME | path join '.lmstudio/bin/')
    | prepend ($env.HOME | path join '.cargo/bin')
    | prepend ($env.HOME | path join '.nix-profile/bin')
    | prepend ($env.HOME | path join '.local/bin')

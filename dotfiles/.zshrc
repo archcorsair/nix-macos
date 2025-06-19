@@ -86,3 +86,6 @@ eval "$(zoxide init zsh)"
 
 # Atuin
 eval "$(atuin init zsh)"
+
+# LM Studio CLI (lms)
+export PATH="$PATH:/Users/nxc/.lmstudio/bin"
