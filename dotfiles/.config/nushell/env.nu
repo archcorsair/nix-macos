@@ -30,7 +30,6 @@ zoxide init nushell | save -f ~/.zoxide.nu
 $env.CARAPACE_BRIDGES = 'zsh,bash,inshellisense'
 mkdir ~/.cache/carapace
 carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
-open ~/.cache/carapace/init.nu | str replace '| default $carapace_completer completer)' '| default { $carapace_completer } completer)' | save --force ~/.cache/carapace/init.nu
 
 # dotfiles path
 $env.DOTPATH = '~/ghq/github.com/archcorsair/nix-macos/dotfiles'
