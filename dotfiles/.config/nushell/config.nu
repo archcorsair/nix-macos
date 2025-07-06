@@ -70,6 +70,7 @@ source ~/.zoxide.nu
 # Starship
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+$env.STARSHIP_CONFIG = ($env.HOME | path join ".config/starship/starship.toml" ) 
 
 # Caparace
 source ~/.cache/carapace/init.nu
