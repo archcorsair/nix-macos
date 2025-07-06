@@ -4,10 +4,14 @@
 
   $env.EDITOR = "hx"
 
+  # homebrew backup module
+  use brewbak.nu
+
   # update homebrew
   def brewup [] {
     brew update
     brew upgrade
+    brewbak
   }
 
   # update nix
@@ -84,7 +88,7 @@ alias "g" = git
 alias "grep" = rg
 alias "la" = eza -a
 alias "ll" = eza --icons auto --git -lah -g --git-repos --group-directories-first --hyperlink --smart-group --no-quotes
-alias "ls" = eza --icons auto
+# alias "ls" = eza --icons auto
 alias "lt" = eza --icons auto --tree --level=2 --no-quotes
 alias "man" = batman
 alias "wimi" = whatismyip
