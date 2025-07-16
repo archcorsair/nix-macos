@@ -16,6 +16,7 @@
         "/Applications/Google Chrome Dev.app"
         "/System/Applications/Messages.app"
         "/Applications/Discord.app"
+        "/Applications/Zed.app"
         "Applications/Ghostty.app"
         "/Applications/Warp.app"
         "/Applications/Visual Studio Code - Insiders.app"
