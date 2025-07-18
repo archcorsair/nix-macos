@@ -1,3 +1,4 @@
+tap "henrygd/beszel"
 tap "noahgorstein/tap"
 brew "atuin", restart_service: :changed
 brew "bat"
@@ -22,6 +23,7 @@ brew "stow"
 brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+brew "henrygd/beszel/beszel-agent"
 brew "noahgorstein/tap/jqp"
 cask "ngrok"
 vscode "ardenivanov.svelte-intellisense"
