@@ -1,9 +1,11 @@
 tap "henrygd/beszel"
 tap "noahgorstein/tap"
+tap "teamookla/speedtest"
 brew "atuin", restart_service: :changed
 brew "bat"
 brew "bat-extras"
 brew "biome"
+brew "btop"
 brew "carapace"
 brew "doggo"
 brew "eza"
@@ -13,19 +15,36 @@ brew "fnm"
 brew "fzf"
 brew "git"
 brew "git-delta"
+brew "glow"
 brew "helix"
+brew "htop"
 brew "jq"
+brew "mas"
+brew "nping"
 brew "nushell"
 brew "pnpm"
 brew "ripgrep"
 brew "starship"
 brew "stow"
+brew "tlrc"
 brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "henrygd/beszel/beszel-agent"
 brew "noahgorstein/tap/jqp"
+brew "teamookla/speedtest/speedtest"
 cask "ngrok"
+mas "1Password for Safari", id: 1569813296
+mas "Amphetamine", id: 937984704
+mas "Bitwarden", id: 1352778147
+mas "ColorSlurp", id: 1287239339
+mas "Copilot", id: 1447330651
+mas "HEIC Converter", id: 1294126402
+mas "Shareful", id: 1522267256
+mas "TestFlight", id: 899247664
+mas "The Unarchiver", id: 425424353
+mas "WhatsApp", id: 310633997
+mas "Xcode", id: 497799835
 vscode "ardenivanov.svelte-intellisense"
 vscode "arrterian.nix-env-selector"
 vscode "bbenoist.nix"
