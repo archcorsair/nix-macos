@@ -21,6 +21,25 @@
     sudo darwin-rebuild switch --flake ~/ghq/github.com/archcorsair/nix-macos#mbp --show-trace
   }
 
+# speedtest wrapper
+  def "speed" [] {
+    speedtest -f json-pretty
+    | from json
+    | do {
+      {
+        "Download (Mbps)": ($in.download.bandwidth * 8 / 1_000_000)
+        "Upload (Mbps)": ($in.upload.bandwidth * 8 / 1_000_000)
+        "Packet Loss": $in.packetLoss
+        "Ping (ms)": $in.ping.latency
+        "Jitter (ms)": $in.ping.jitter
+        Timestamp: $in.timestamp
+        ISP: $in.isp
+        Server: ($in.server.name + " (" + $in.server.location + ")")
+        Result: $in.result.url
+      }
+    }
+  }
+
   def "version-completions" [] {
   [
     {value: "4", description: "IPv4 address (default)"},
@@ -74,7 +93,7 @@ source ~/.zoxide.nu
 # Starship
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-$env.STARSHIP_CONFIG = ($env.HOME | path join ".config/starship/starship.toml" ) 
+$env.STARSHIP_CONFIG = ($env.HOME | path join ".config/starship/starship.toml" )
 
 # Caparace
 source ~/.cache/carapace/init.nu
