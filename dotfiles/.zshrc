@@ -23,6 +23,9 @@ unsetopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
+# Homebrew
+export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt"
+
 # Default Editor
 export EDITOR="hx"
 
@@ -89,3 +92,4 @@ eval "$(atuin init zsh)"
 
 # LM Studio CLI (lms)
 export PATH="$PATH:/Users/nxc/.lmstudio/bin"
+
