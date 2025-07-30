@@ -7,6 +7,9 @@
   # homebrew backup module
   use brewbak.nu
 
+  # tailscale dns helper
+  use taildns.nu
+
   # update homebrew
   def brewup [] {
     brew update
