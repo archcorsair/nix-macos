@@ -129,7 +129,7 @@ if not (which fnm | is-empty) {
     $env.config.hooks.env_change.PWD = (
         $env.config.hooks.env_change.PWD? | append {
             condition: {|| ['.nvmrc' '.node-version', 'package.json'] | any {|el| $el | path exists}}
-            code: {|| ^fnm use}
+            code: {|| ^fnm use --install-if-missing}
         }
     )
 }
