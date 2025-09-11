@@ -4,6 +4,7 @@ $env.XDG_DATA_HOME = ($env.HOME | path join ".local/share")
 $env.XDG_STATE_HOME = ($env.HOME | path join ".local/state")
 $env.XDG_CACHE_HOME = ($env.HOME | path join ".cache")
 $env.XDG_DATA_DIRS = ["/usr/local/share" "/usr/share"]
+$env.PNPM_HOME = ($env.HOME | path join ".local/share/pnpm")
 
 # Path
 $env.PATH = (
@@ -14,6 +15,7 @@ $env.PATH = (
    | prepend '/opt/homebrew/sbin'
    | prepend '/opt/homebrew/opt'
    | prepend '/opt/homebrew/opt/ruby/bin'
+   | prepend '/opt/homebrew/opt/java/bin'
    | prepend '/nix/var/nix/profiles/default/bin'
    | prepend '/run/current-system/sw/bin/'
    | prepend ('/etc/profiles/per-user' | path join $env.USER bin)
@@ -36,3 +38,8 @@ $env.DOTPATH = '~/ghq/github.com/archcorsair/nix-macos/dotfiles'
 
 # Rust toolchain
 source $"($nu.home-path)/.cargo/env.nu"
+
+# pnpm
+$env.PNPM_HOME = "/Users/nxc/.local/share/pnpm"
+$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
+# pnpm end

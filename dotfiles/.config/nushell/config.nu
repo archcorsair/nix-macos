@@ -134,21 +134,39 @@ if not (which fnm | is-empty) {
     )
 }
 
-# External Completers
+# # External Completers
 let fish_completer = {|spans|
     fish --command $'complete "--do-complete=($spans | str join " ")"'
     | from tsv --flexible --noheaders --no-infer
     | rename value description
 }
 
+# let carapace_completer = {|spans: list<string>|
+#     carapace $spans.0 nushell ...$spans
+#     | from json
+#     | if ($in | default [] | where value =~ '^-.*err$' | is-empty) { $in } else { null }
+# }
+# New as of 2025
 let carapace_completer = {|spans: list<string>|
     carapace $spans.0 nushell ...$spans
     | from json
-    | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }
+    | if ($in | default [] | where value == $"($spans | last)ERR" | is-empty) { $in } else { null }
+}
+# Original
+# let zoxide_completer = {|spans|
+#     $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD}
+# }
+
+let zoxide_completer = {|spans|
+    $spans | skip 1 | zoxide query -l ...$in | lines | each {|line| $line | str replace $env.HOME '~' } | where {|x| $x != $env.PWD}
 }
 
 let zoxide_completer = {|spans|
-    $spans | skip 1 | zoxide query -l ...$in | lines | where {|x| $x != $env.PWD}
+    let query = ($spans | skip 1)
+    zoxide query -l ...$query
+    | lines
+    | where {|x| $x != $env.PWD }
+    | each {|dir| { value: $dir, description: "" } }
 }
 
 # This completer will use carapace by default
@@ -164,25 +182,38 @@ let external_completer = {|spans|
     } else {
         $spans
     }
+    # let spans = (if $expanded_alias != null  {
+    #     $spans | skip 1 | prepend ($expanded_alias | split words)
+    # } else { $spans })
 
     match $spans.0 {
+        z | zi => $zoxide_completer
+        __zoxide_z | __zoxide_zi => $zoxide_completer
         # default nushell behavior for cd
-        cd => null
+        # cd => null
+        # cd => $zoxide_completer
         # carapace completions are incorrect for nu
         nu => $fish_completer
         # fish completes commits and branch names in a nicer way
         git => $fish_completer
         # use zoxide completions for zoxide commands
-        __zoxide_z | __zoxide_zi => $zoxide_completer
+        # __zoxide_z | __zoxide_zi => $zoxide_completer
         _ => $carapace_completer
     } | do $in $spans
 }
+# Debug
+# let external_completer = {|spans|
+#     print $"[external_completer] Called with: ($spans)"
+#     [{ value: "test", description: "hardcoded test" }]
+# }
 
 $env.config = {
     completions: {
+        case_sensitive: false
         external: {
             enable: true
             completer: $external_completer
         }
     }
 }
+
