@@ -23,6 +23,7 @@ brew "glow"
 brew "helix"
 brew "htop"
 brew "jq"
+brew "jqp"
 brew "mas"
 brew "maven"
 brew "nping"
@@ -36,15 +37,17 @@ brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "henrygd/beszel/beszel-agent"
-brew "noahgorstein/tap/jqp"
 brew "teamookla/speedtest/speedtest"
 cask "expo-orbit"
+cask "jordanbaird-ice"
 cask "ngrok"
+cask "only-switch"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "ColorSlurp", id: 1287239339
 mas "Copilot", id: 1447330651
+mas "Folder Quick Look", id: 6753110395
 mas "HEIC Converter", id: 1294126402
 mas "Shareful", id: 1522267256
 mas "TestFlight", id: 899247664
