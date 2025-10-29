@@ -48,6 +48,7 @@
                 ./modules/home-manager/bat.nix
                 ./modules/home-manager/btop.nix
                 ./modules/home-manager/carapace.nix
+                ./modules/home-manager/delta.nix
                 ./modules/home-manager/eza.nix
                 ./modules/home-manager/fzf.nix
                 ./modules/home-manager/git.nix
