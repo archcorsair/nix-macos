@@ -92,8 +92,10 @@ injection-regex = "nix"
 file-types = ["nix"]
 shebangs = []
 comment-token = "#"
-language-servers = [ "nil" ]
+language-servers = [ "nixd", "nil" ]
 indent = { tab-width = 2, unit = "  " }
+[language-server.nixd]
+command = "nixd"
 
 [[grammar]]
 name = "nix"

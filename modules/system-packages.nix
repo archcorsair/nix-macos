@@ -5,6 +5,7 @@
     devenv
     gopls
     nil
+    nixd
     nixfmt-rfc-style
     # (rust-bin.stable.latest.default.override {
     #   extensions = [
