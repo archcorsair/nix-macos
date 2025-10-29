@@ -11,9 +11,8 @@
 
       persistent-apps = [
         "/System/Applications/App Store.app"
+        "/Applications/Helium.app"
         "/Applications/Dia.app"
-        "/Applications/Arc.app"
-        "/Applications/Google Chrome Dev.app"
         "/System/Applications/Messages.app"
         "/Applications/Discord.app"
         "Applications/Ghostty.app"
