@@ -1,19 +1,18 @@
 {
   programs.git = {
     enable = false;
-    userEmail = "archcorsair@gmail.com";
-    userName = "Daniel Shneyder";
-    aliases = {
-      co = "checkout";
-      c = "commit";
-      s = "status";
-      a = "add";
-      d = "diff";
-    };
-    delta = {
-      enable = true;
-    };
-    extraConfig = {
+    settings = {
+      user.email = "archcorsair@gmail.com";
+      user.name = "Daniel Shneyder";
+
+      aliases = {
+        co = "checkout";
+        c = "commit";
+        s = "status";
+        a = "add";
+        d = "diff";
+      };
+
       delta = {
         # Tokyo Night Theme
         minus-style = "syntax #37222c";
