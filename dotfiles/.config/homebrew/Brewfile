@@ -1,5 +1,6 @@
 tap "henrygd/beszel"
 tap "noahgorstein/tap"
+tap "oven-sh/bun"
 tap "teamookla/speedtest"
 brew "atuin", restart_service: :changed
 brew "bat"
@@ -7,6 +8,7 @@ brew "bat-extras"
 brew "biome"
 brew "btop"
 brew "carapace"
+brew "cbonsai"
 brew "cocoapods"
 brew "doggo"
 brew "duti"
@@ -14,6 +16,7 @@ brew "eza"
 brew "fancy-cat"
 brew "fastfetch"
 brew "fd"
+brew "ffmpeg"
 brew "fnm"
 brew "fzf"
 brew "ghq"
@@ -28,6 +31,7 @@ brew "mas"
 brew "maven"
 brew "nping"
 brew "nushell"
+brew "opencode"
 brew "pnpm"
 brew "ripgrep"
 brew "starship"
@@ -37,8 +41,10 @@ brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "henrygd/beszel/beszel-agent"
+brew "oven-sh/bun/bun"
 brew "teamookla/speedtest/speedtest"
 cask "expo-orbit"
+cask "font-jetbrains-mono-nerd-font"
 cask "jordanbaird-ice"
 cask "ngrok"
 cask "only-switch"
@@ -47,6 +53,7 @@ mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "ColorSlurp", id: 1287239339
 mas "Copilot", id: 1447330651
+mas "Flighty", id: 1358823008
 mas "Folder Quick Look", id: 6753110395
 mas "HEIC Converter", id: 1294126402
 mas "Shareful", id: 1522267256
