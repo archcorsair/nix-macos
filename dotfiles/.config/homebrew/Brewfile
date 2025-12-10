@@ -11,6 +11,7 @@ brew "btop"
 brew "carapace"
 brew "cbonsai"
 brew "cocoapods"
+brew "curl"
 brew "doggo"
 brew "duti"
 brew "eza"
@@ -46,6 +47,7 @@ brew "zsh-syntax-highlighting"
 brew "henrygd/beszel/beszel-agent"
 brew "oven-sh/bun/bun"
 brew "teamookla/speedtest/speedtest"
+cask "appflowy"
 cask "expo-orbit"
 cask "font-jetbrains-mono-nerd-font"
 cask "jordanbaird-ice"
@@ -54,11 +56,12 @@ cask "only-switch"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
-mas "ColorSlurp", id: 1287239339
+mas "ColorSlurp", id: 0
 mas "Copilot", id: 1447330651
 mas "Flighty", id: 1358823008
 mas "Folder Quick Look", id: 6753110395
 mas "HEIC Converter", id: 1294126402
+mas "Perplexity", id: 6714467650
 mas "Shareful", id: 1522267256
 mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353
