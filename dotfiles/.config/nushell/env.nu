@@ -16,12 +16,15 @@ $env.PATH = (
    | prepend '/opt/homebrew/opt'
    | prepend '/opt/homebrew/opt/ruby/bin'
    | prepend '/opt/homebrew/opt/java/bin'
+   | prepend '/opt/homebrew/opt/curl/bin'
    | prepend '/nix/var/nix/profiles/default/bin'
    | prepend '/run/current-system/sw/bin/'
    | prepend ('/etc/profiles/per-user' | path join $env.USER bin)
    | prepend ($env.HOME | path join '.lmstudio/bin/')
    | prepend ($env.HOME | path join '.nix-profile/bin')
    | prepend ($env.HOME | path join '.local/bin')
+   | prepend ($env.HOME | path join '.cache/.bun/bin')
+   | prepend ($env.HOME | path join '.antigravity/antigravity/bin')
    | uniq # filter so the paths are unique
 )
 
