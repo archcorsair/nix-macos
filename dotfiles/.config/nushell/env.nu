@@ -40,7 +40,7 @@ carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
 $env.DOTPATH = '~/ghq/github.com/archcorsair/nix-macos/dotfiles'
 
 # Rust toolchain
-source $"($nu.home-path)/.cargo/env.nu"
+source $"($nu.home-dir)/.cargo/env.nu"
 
 # pnpm
 $env.PNPM_HOME = "/Users/nxc/.local/share/pnpm"
