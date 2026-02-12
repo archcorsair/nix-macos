@@ -26,3 +26,4 @@ keybind = global:super+shift+/=toggle_quick_terminal
 
 # Shell Override
 command = /opt/homebrew/bin/nu
+keybind = shift+enter=text:\x1b\r
