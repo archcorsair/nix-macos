@@ -23,6 +23,7 @@ brew "ffmpeg"
 brew "fnm"
 brew "fzf"
 brew "gemini-cli"
+brew "gh"
 brew "ghq"
 brew "git"
 brew "git-delta"
@@ -33,11 +34,14 @@ brew "jq"
 brew "jqp"
 brew "mas"
 brew "maven"
-brew "nping"
+brew "nbping"
+brew "ncdu"
 brew "nushell"
 brew "ripgrep"
 brew "opencode"
 brew "pnpm"
+brew "qrencode"
+brew "signal-cli"
 brew "starship"
 brew "stow"
 brew "tlrc"
@@ -67,6 +71,7 @@ mas "Folder Quick Look", id: 6753110395
 mas "HEIC Converter", id: 1294126402
 mas "Perplexity", id: 6714467650
 mas "Shareful", id: 1522267256
+mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353
 mas "WhatsApp", id: 310633997
