@@ -31,6 +31,9 @@ $env.PATH = (
 # Zoxide
 zoxide init nushell | save -f ~/.zoxide.nu
 
+# mise
+^mise activate nu | save ($nu.default-config-dir | path join mise.nu) --force
+
 # Carapace
 $env.CARAPACE_BRIDGES = 'zsh,bash,inshellisense'
 mkdir ~/.cache/carapace
