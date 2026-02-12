@@ -93,3 +93,6 @@ eval "$(atuin init zsh)"
 # LM Studio CLI (lms)
 export PATH="$PATH:/Users/nxc/.lmstudio/bin"
 
+
+# Added by Antigravity
+export PATH="/Users/nxc/.antigravity/antigravity/bin:$PATH"
