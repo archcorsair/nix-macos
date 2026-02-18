@@ -17,7 +17,10 @@ def --env "update-env" [] {
 }
 export-env {
   
-  '' | parse vars | update-env
+  'set,PATH,/Users/nxc/.antigravity/antigravity/bin:/Users/nxc/.cache/.bun/bin:/Users/nxc/.local/bin:/Users/nxc/.nix-profile/bin:/Users/nxc/.lmstudio/bin/:/etc/profiles/per-user/nxc/bin:/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/java/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/opt:/opt/homebrew/sbin:/opt/homebrew/bin:/usr/local/bin:/Users/nxc/.local/share/pnpm:/Users/nxc/.cargo/bin:/Users/nxc/.config/carapace/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Ghostty.app/Contents/MacOS
+hide,MISE_SHELL,
+hide,__MISE_DIFF,
+hide,__MISE_DIFF,' | parse vars | update-env
   $env.MISE_SHELL = "nu"
   let mise_hook = {
     condition: { "MISE_SHELL" in $env }
