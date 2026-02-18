@@ -100,3 +100,8 @@ command = "nixd"
 [[grammar]]
 name = "nix"
 source = { git = "https://github.com/nix-community/tree-sitter-nix", rev = "1b69cf1fa92366eefbe6863c184e5d2ece5f187d" }
+
+[[language]]
+name = "nu"
+auto-format = true
+formatter = { command = "topiary", args = ["format", "--language", "nu"] }
