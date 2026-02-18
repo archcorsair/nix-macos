@@ -8,25 +8,29 @@ $env.PNPM_HOME = ($env.HOME | path join ".local/share/pnpm")
 
 # Path
 $env.PATH = (
-   $env.PATH
-   | split row (char esep)
-   | prepend '/usr/local/bin'
-   | prepend '/opt/homebrew/bin'
-   | prepend '/opt/homebrew/sbin'
-   | prepend '/opt/homebrew/opt'
-   | prepend '/opt/homebrew/opt/ruby/bin'
-   | prepend '/opt/homebrew/opt/java/bin'
-   | prepend '/opt/homebrew/opt/curl/bin'
-   | prepend '/nix/var/nix/profiles/default/bin'
-   | prepend '/run/current-system/sw/bin/'
-   | prepend ('/etc/profiles/per-user' | path join $env.USER bin)
-   | prepend ($env.HOME | path join '.lmstudio/bin/')
-   | prepend ($env.HOME | path join '.nix-profile/bin')
-   | prepend ($env.HOME | path join '.local/bin')
-   | prepend ($env.HOME | path join '.cache/.bun/bin')
-   | prepend ($env.HOME | path join '.antigravity/antigravity/bin')
-   | uniq # filter so the paths are unique
+  $env.PATH
+  | split row (char esep)
+  | prepend '/usr/local/bin'
+  | prepend '/opt/homebrew/bin'
+  | prepend '/opt/homebrew/sbin'
+  | prepend '/opt/homebrew/opt'
+  | prepend '/opt/homebrew/opt/ruby/bin'
+  | prepend '/opt/homebrew/opt/java/bin'
+  | prepend '/opt/homebrew/opt/curl/bin'
+  | prepend '/nix/var/nix/profiles/default/bin'
+  | prepend '/run/current-system/sw/bin/'
+  | prepend ('/etc/profiles/per-user' | path join $env.USER bin)
+  | prepend ($env.HOME | path join '.lmstudio/bin/')
+  | prepend ($env.HOME | path join '.nix-profile/bin')
+  | prepend ($env.HOME | path join '.local/bin')
+  | prepend ($env.HOME | path join '.cache/.bun/bin')
+  | prepend ($env.HOME | path join '.antigravity/antigravity/bin')
+  | uniq # filter so the paths are unique
 )
+
+# Topiary
+$env.TOPIARY_CONFIG_FILE = ($env.XDG_CONFIG_HOME | path join topiary languages.ncl)
+$env.TOPIARY_LANGUAGE_DIR = ($env.XDG_CONFIG_HOME | path join topiary queries)
 
 # Zoxide
 zoxide init nushell | save -f ~/.zoxide.nu
@@ -47,5 +51,5 @@ source $"($nu.home-dir)/.cargo/env.nu"
 
 # pnpm
 $env.PNPM_HOME = "/Users/nxc/.local/share/pnpm"
-$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
+$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME)
 # pnpm end
