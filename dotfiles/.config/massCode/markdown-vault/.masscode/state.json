@@ -1,0 +1,367 @@
+{
+  "counters": {
+    "contentId": 37,
+    "folderId": 13,
+    "snippetId": 25,
+    "tagId": 38
+  },
+  "folderUi": {
+    "2": {
+      "isOpen": 0
+    },
+    "6": {
+      "isOpen": 0
+    },
+    "7": {
+      "isOpen": 0
+    },
+    "8": {
+      "isOpen": 0
+    },
+    "9": {
+      "isOpen": 0
+    },
+    "11": {
+      "isOpen": 0
+    },
+    "12": {
+      "isOpen": 0
+    },
+    "13": {
+      "isOpen": 0
+    }
+  },
+  "snippets": [
+    {
+      "filePath": "Utilities/Feature Flag Bucketing.md",
+      "id": 1
+    },
+    {
+      "filePath": ".masscode/trash/Untitled snippet.md",
+      "id": 2
+    },
+    {
+      "filePath": "React/Tick-Tac-Toe Game.md",
+      "id": 3
+    },
+    {
+      "filePath": "React/JIRA Velocity Bar Chart.md",
+      "id": 4
+    },
+    {
+      "filePath": "React/File Explorer.md",
+      "id": 5
+    },
+    {
+      "filePath": "React/[Partial] React Table.md",
+      "id": 6
+    },
+    {
+      "filePath": "Utilities/Fetch With Concurrency.md",
+      "id": 7
+    },
+    {
+      "filePath": "Utilities/Nest and Find Comments.md",
+      "id": 8
+    },
+    {
+      "filePath": "Utilities/Debounce.md",
+      "id": 9
+    },
+    {
+      "filePath": "Utilities/Throttle.md",
+      "id": 10
+    },
+    {
+      "filePath": "Utilities/Event Emitter.md",
+      "id": 11
+    },
+    {
+      "filePath": "Utilities/Flatten.md",
+      "id": 12
+    },
+    {
+      "filePath": "Utilities/Memoize.md",
+      "id": 13
+    },
+    {
+      "filePath": "Design Patterns/Adapter & Strategy Pattern.md",
+      "id": 14
+    },
+    {
+      "filePath": "Commands/MacOS Update Default App.md",
+      "id": 15
+    },
+    {
+      "filePath": "AI LLM/Expo Prompt.md",
+      "id": 16
+    },
+    {
+      "filePath": ".masscode/trash/Untitled snippet 1.md",
+      "id": 17
+    },
+    {
+      "filePath": "AI LLM/Wide Event Logging.md",
+      "id": 18
+    },
+    {
+      "filePath": "AI LLM/AGENTS.md",
+      "id": 19
+    },
+    {
+      "filePath": "Utilities/Calculate Bearing - 2 points.md",
+      "id": 20
+    },
+    {
+      "filePath": "Commands/Get Homebridge Token.md",
+      "id": 21
+    },
+    {
+      "filePath": "Design/Building Your Color Palette.md",
+      "id": 22
+    },
+    {
+      "filePath": "Design/Labels are a last resort.md",
+      "id": 23
+    },
+    {
+      "filePath": "Cheat Sheets/Mise.md",
+      "id": 24
+    },
+    {
+      "filePath": "Commands/MacOS Remove App from Quarantine.md",
+      "id": 25
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "featureflag",
+      "createdAt": 1751863369926,
+      "updatedAt": 1751863369926
+    },
+    {
+      "id": 2,
+      "name": "feature-flag",
+      "createdAt": 1751863372678,
+      "updatedAt": 1751863372678
+    },
+    {
+      "id": 3,
+      "name": "feature",
+      "createdAt": 1751863374700,
+      "updatedAt": 1751863374700
+    },
+    {
+      "id": 4,
+      "name": "flag",
+      "createdAt": 1751863375204,
+      "updatedAt": 1751863375204
+    },
+    {
+      "id": 5,
+      "name": "bucket",
+      "createdAt": 1751863377671,
+      "updatedAt": 1751863377671
+    },
+    {
+      "id": 6,
+      "name": "bucketing",
+      "createdAt": 1751863378562,
+      "updatedAt": 1751863378562
+    },
+    {
+      "id": 7,
+      "name": "tictactoe",
+      "createdAt": 1751926612256,
+      "updatedAt": 1751926612256
+    },
+    {
+      "id": 8,
+      "name": "game",
+      "createdAt": 1751926612973,
+      "updatedAt": 1751926612973
+    },
+    {
+      "id": 9,
+      "name": "jira",
+      "createdAt": 1751934343863,
+      "updatedAt": 1751934343863
+    },
+    {
+      "id": 10,
+      "name": "bar chart",
+      "createdAt": 1751934345926,
+      "updatedAt": 1751934345926
+    },
+    {
+      "id": 11,
+      "name": "chart",
+      "createdAt": 1751934357958,
+      "updatedAt": 1751934357958
+    },
+    {
+      "id": 12,
+      "name": "Atlassian",
+      "createdAt": 1751934510112,
+      "updatedAt": 1751934510112
+    },
+    {
+      "id": 13,
+      "name": "recursive",
+      "createdAt": 1752172922270,
+      "updatedAt": 1752172922270
+    },
+    {
+      "id": 14,
+      "name": "file explorer",
+      "createdAt": 1752172924157,
+      "updatedAt": 1752172924157
+    },
+    {
+      "id": 15,
+      "name": "bfs",
+      "createdAt": 1752366998377,
+      "updatedAt": 1752366998377
+    },
+    {
+      "id": 16,
+      "name": "fetch",
+      "createdAt": 1752367004876,
+      "updatedAt": 1752367004876
+    },
+    {
+      "id": 17,
+      "name": "concurrency",
+      "createdAt": 1752367008068,
+      "updatedAt": 1752367008068
+    },
+    {
+      "id": 18,
+      "name": "promise",
+      "createdAt": 1752367012193,
+      "updatedAt": 1752367012193
+    },
+    {
+      "id": 19,
+      "name": "nest",
+      "createdAt": 1752367043040,
+      "updatedAt": 1752367043040
+    },
+    {
+      "id": 20,
+      "name": "comments",
+      "createdAt": 1752367043874,
+      "updatedAt": 1752367043874
+    },
+    {
+      "id": 21,
+      "name": "debounce",
+      "createdAt": 1752374552960,
+      "updatedAt": 1752374552960
+    },
+    {
+      "id": 22,
+      "name": "throttle",
+      "createdAt": 1752384412829,
+      "updatedAt": 1752384412829
+    },
+    {
+      "id": 23,
+      "name": "flatten",
+      "createdAt": 1752469167583,
+      "updatedAt": 1752469167583
+    },
+    {
+      "id": 24,
+      "name": "memoize",
+      "createdAt": 1752521214955,
+      "updatedAt": 1752521214955
+    },
+    {
+      "id": 25,
+      "name": "replacer",
+      "createdAt": 1752521216465,
+      "updatedAt": 1752521216465
+    },
+    {
+      "id": 26,
+      "name": "adapter",
+      "createdAt": 1753118531600,
+      "updatedAt": 1753118531600
+    },
+    {
+      "id": 27,
+      "name": "strategy",
+      "createdAt": 1753118533964,
+      "updatedAt": 1753118533964
+    },
+    {
+      "id": 28,
+      "name": "pattern",
+      "createdAt": 1753118535293,
+      "updatedAt": 1753118535293
+    },
+    {
+      "id": 29,
+      "name": "patterns",
+      "createdAt": 1753118536298,
+      "updatedAt": 1753118536298
+    },
+    {
+      "id": 30,
+      "name": "typescript",
+      "createdAt": 1753118547177,
+      "updatedAt": 1753118547177
+    },
+    {
+      "id": 31,
+      "name": "service",
+      "createdAt": 1753118548102,
+      "updatedAt": 1753118548102
+    },
+    {
+      "id": 32,
+      "name": "default",
+      "createdAt": 1754682566902,
+      "updatedAt": 1754682566902
+    },
+    {
+      "id": 33,
+      "name": "macos",
+      "createdAt": 1754682568613,
+      "updatedAt": 1754682568613
+    },
+    {
+      "id": 34,
+      "name": "nushell",
+      "createdAt": 1769982866074,
+      "updatedAt": 1769982866074
+    },
+    {
+      "id": 35,
+      "name": "homebridge",
+      "createdAt": 1769982868274,
+      "updatedAt": 1769982868274
+    },
+    {
+      "id": 36,
+      "name": "cheatsheet",
+      "createdAt": 1770884918819,
+      "updatedAt": 1770884918819
+    },
+    {
+      "id": 37,
+      "name": "mise",
+      "createdAt": 1770884920316,
+      "updatedAt": 1770884920316
+    },
+    {
+      "id": 38,
+      "name": "quarantine",
+      "createdAt": 1771297801051,
+      "updatedAt": 1771297801051
+    }
+  ],
+  "version": 2
+}
